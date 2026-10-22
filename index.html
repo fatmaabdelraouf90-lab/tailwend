@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمال الطبيعة 4K - Tailwind CSS Task</title>
+
+    <!-- 1. Google Fonts (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- 2. Font Awesome CSS (من فولدرك المحلي) -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- 3. Animate.css (من فولدرك المحلي) -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- 4. Tailwind CSS (لتشغيل كلاسات تالويند) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 5. Your Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- 1. Header / Navbar باستخدام Tailwind CSS -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-emerald-900/95 backdrop-blur-md shadow-lg text-white">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold flex items-center gap-2">
+                <i class="fas fa-leaf text-emerald-400"></i> سحر الطبيعة 4K
+            </a>
+
+            <nav class="hidden md:flex space-x-6 space-x-reverse font-semibold">
+                <a href="#" class="hover:text-emerald-300 transition">الرئيسية</a>
+                <a href="#gallery" class="hover:text-emerald-300 transition">معرض الصور</a>
+                <a href="#about" class="hover:text-emerald-300 transition">عن الطبيعة</a>
+            </nav>
+
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="hero-bg bg-cover bg-center h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 wow animateanimated animatefadeInDown">
+                استكشف روعة العالم
+            </h1>
+            <p class="text-lg md:text-2xl mb-8 opacity-90 wow animateanimated animatefadeInUp">
+                Nature With tailwind css
+            </p>
+            <a href="#gallery"
+                class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg px-8 py-3 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <i class="fas fa-compass ml-2"></i> استكشف المعرض
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. Nature Gallery (Cards) -->
+    <main class="container mx-auto px-6 py-16 flex-grow" id="gallery">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-bold text-emerald-800 mb-2 wow animateanimated animatefadeIn">أجمل
+                المناظر الطبيعية</h2>
+            <p class="text-gray-500 text-lg">تناغم الألوان بين الجبال، البحيرات، والغابات</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+                class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-100 wow animateanimated animatefadeInUp">
+                <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=800&q=80"
+                    class="w-full h-64 object-cover" alt="الجبال والبحيرة">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">البحيرات والجبال</h3>
+                    <p class="text-gray-600 text-sm mb-4">انعكاس ساحر لقمم الجبال المغطاة بالثلوج على مياه البحيرة
+                        النقية.</p>
+                    <a href="#"
+                        class="inline-block border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white font-bold px-4 py-2 rounded-lg transition duration-300 text-sm">عرض
+                        التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-100 wow animateanimated animatefadeInUp"
+                data-wow-delay="0.2s">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80"
+                    class="w-full h-64 object-cover" alt="الغابة الساحرة">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">الغابات الخضراء</h3>
+                    <p class="text-gray-600 text-sm mb-4">أشعة الشمس وهي تتخلل أشجار الغابات العالية في مشهد يبعث على
+                        الهدوء.</p>
+                    <a href="#"
+                        class="inline-block border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white font-bold px-4 py-2 rounded-lg transition duration-300 text-sm">عرض
+                        التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border border-gray-100 wow animateanimated animatefadeInUp"
+                data-wow-delay="0.4s">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+                    class="card-img-top w-full h-64 object-cover" alt="الغروب والضباب">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">غروب الشمس المذهل</h3>
+                    <p class="text-gray-600 text-sm mb-4">ألوان شفق الغروب الساحرة وهي تغطي التلال والوديان الضبابية.
+                    </p>
+                    <a href="#"
+                        class="inline-block border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white font-bold px-4 py-2 rounded-lg transition duration-300 text-sm">عرض
+                        التفاصيل</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. Footer باستخدام Tailwind CSS -->
+    <footer class="bg-emerald-950 text-white mt-auto">
+        <div class="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h4 class="text-xl font-bold text-amber-400 mb-3 flex items-center gap-2">
+                    <i class="fas fa-tree"></i> سحر الطبيعة
+                </h4>
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    مشروع تطبيق Tailwind CSS لمقارنته بمكتبات الـ CSS التقليدية مثل Bootstrap.
+                </p>
+            </div>
+            <div class="md:text-left flex justify-start md:justify-end space-x-4 space-x-reverse text-xl">
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-500 flex items-center justify
