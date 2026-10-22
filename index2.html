@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمال الطبيعة - Nature 4K</title>
+
+    <!-- 1. Google Fonts (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- 2. Font Awesome CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- 3. Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 4. MDBootstrap CSS -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+
+    <!-- 5. Animate.css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- 6. Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Card Hover Effects */
+        .nature-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .nature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* MDB Custom Navbar Background */
+        .navbar-custom {
+            background: rgba(20, 83, 45, 0.95) !important;
+            /* أخضر طبيعي داكن */
+            backdrop-filter: blur(10px);
+        }
+
+        /* Custom Footer */
+        footer {
+            background-color: #14532d !important;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- 1. Header / Navbar من MDBootstrap -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow-2-strong">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="#">
+                    <i class="fas fa-leaf text-success me-2"></i> سحر الطبيعة 4K
+                </a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fs-6">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">معرض الصور</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">عن الطبيعة</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section (واجهة الموقع) -->
+    <section class="hero-section text-center">
+        <div class="container px-4">
+            <h1 class="display-3 fw-extrabold wow animateanimated animatefadeInDown mb-3">
+                استكشف روعة العالم
+            </h1>
+            <p class="lead fs-3 wow animateanimated animatefadeInUp mb-4">
+                صور فائقة الدقة دقة 4K لأجمل المناظر الطبيعية حول العالم
+            </p>
+            <a href="#gallery"
+                class="btn btn-success btn-lg ripple-surface shadow-2-strong rounded-pill px-5 py-3 fs-5">
+                <i class="fas fa-compass me-2"></i> استكشف المعرض
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. Nature Gallery (معرض الصور 4K) -->
+    <main class="container my-5 flex-grow-1" id="gallery">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-success display-5 wow animateanimated animatefadeIn">أجمل المناظر الطبيعية</h2>
+            <p class="text-muted fs-5">تناغم الألوان بين الجبال، البحيرات، والغابات</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card nature-card shadow-1-strong border-0 h-100 wow animateanimated animatefadeInUp"
+                    data-wow-delay="0.1s">
+                    <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top" alt="الجبال والبحيرة">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-dark">البحيرات والجبال</h5>
+                        <p class="card-text text-muted">انعكاس ساحر لقمم الجبال المغطاة بالثلوج على مياه البحيرة النقية.
+                        </p>
+                        <a href="#!" class="btn btn-outline-success btn-rounded ripple-surface">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card nature-card shadow-1-strong border-0 h-100 wow animateanimated animatefadeInUp"
+                    data-wow-delay="0.3s">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top" alt="الغابة الساحرة">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-dark">الغابات الخضراء</h5>
+                        <p class="card-text text-muted">أشعة الشمس وهي تتخلل أشجار الغابات العالية في مشهد يبعث على
+                            الهدوء.</p>
+                        <a href="#!" class="btn btn-outline-success btn-rounded ripple-surface">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card nature-card shadow-1-strong border-0 h-100 wow animateanimated animatefadeInUp"
+                    data-wow-delay="0.5s">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top" alt="الغروب والضباب">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-dark">غروب الشمس المذهل</h5>
+                        <p class="card-text text-muted">ألوان شفق الغروب الساحرة وهي تغطي التلال والوديان الضبابية.</p>
+                        <a href="#!" class="btn btn-outline-success btn-rounded ripple-surface">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. Footer من MDBootstrap -->
+    <footer class="text-white text-center text-lg-start mt-auto shadow-3-strong">
+        <div class="container p-4">
+            <div class="row my-3">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fw-bold text-warning mb-3">
+                        <i class="fas fa-tree me-2"></i> سحر الطبيعة
+                    </h5>
+                    <p class="lh-lg">
+                        مشروع تفاعلي يعرض أجمل صور الطبيعة بدقة عالية 4K لتسليط الضوء على جمال كوكبنا وضرورة الحفاظ على
+                        البيئة.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-lg-end">
+                    <h5 class="text-uppercase fw-bold text-warning mb-3">تواصل معنا</h5>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2026 جميع الحقوق محفوظة | مشروع MDBootstrap للطبيعة
+        </div>
+    </footer>
+
+    <!-- JavaScript Files (بالترتيب الصحيح) -->
+    <!-- 1. Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 2. MDBootstrap JS -->
+    <script src="js/mdb.umd.min.js"></script>
+
+    <!-- 3. WOW.js -->
+    <script src="js/wow_min.js"></script>
+    <script>
+        // تفعيل أنيميشن WOW.js
+        if (typeof WOW !== 'undefined') {
+            new WOW().init();
+        }
+    </script>
+
+    <!-- 4. Custom JS Files -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("تم تحميل موقع الطبيعة 4K بنجاح!");
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
